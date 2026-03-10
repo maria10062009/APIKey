@@ -1,0 +1,162 @@
+/* Importando uma fonte fofa e arredondada do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
+
+body {
+    font-family: 'Nunito', sans-serif;
+    /* Degradê lilás pastel bem fofo e suave */
+    background: linear-gradient(135deg, #f3e8ff 0%, #d8b4fe 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #4c1d95; /* Roxo escuro para os textos */
+}
+
+/* Container Principal (O Cartão Branco) */
+.container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 30px; /* Bordas bem mais arredondadas */
+    /* Sombra com um leve tom de roxo */
+    box-shadow: 0 20px 40px rgba(107, 33, 168, 0.15);
+    text-align: center;
+    width: 90%;
+    max-width: 450px;
+    margin: 20px;
+}
+
+h1 {
+    color: #7e22ce; /* Roxo vibrante */
+    margin-bottom: 25px;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+/* =========================================
+   INPUTS E BOTÕES
+   ========================================= */
+input {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 15px;
+    border: 2px solid #e9d5ff; /* Bordinha lilás clara */
+    border-radius: 20px; /* Input redondinho */
+    font-size: 1.1rem;
+    font-family: 'Nunito', sans-serif;
+    color: #581c87;
+    box-sizing: border-box;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #faf5ff;
+}
+
+input::placeholder {
+    color: #c084fc;
+}
+
+input:focus {
+    border-color: #a855f7;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.2); /* Brilho roxo ao clicar */
+}
+
+button {
+    width: 100%;
+    padding: 16px;
+    /* Degradê roxo mágico para o botão */
+    background: linear-gradient(to right, #a855f7, #9333ea);
+    color: white;
+    border: none;
+    border-radius: 25px; /* Botão em formato de pílula */
+    font-size: 1.2rem;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(147, 51, 234, 0.3);
+}
+
+button:hover { 
+    background: linear-gradient(to right, #9333ea, #7e22ce); 
+    transform: translateY(-3px); 
+    box-shadow: 0 8px 20px rgba(147, 51, 234, 0.4);
+}
+
+button:active { 
+    transform: translateY(0); 
+}
+
+/* =========================================
+   CARD DE CLIMA (RESULTADO)
+   ========================================= */
+.card-clima {
+    background: #faf5ff; /* Fundo lilás bem clarinho */
+    border: 2px dashed #c084fc; /* Bordinha tracejada fofa */
+    border-radius: 24px;
+    padding: 25px;
+    margin-top: 25px;
+    animation: bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Animação saltitante */
+    text-align: center;
+}
+
+.cidade-nome { 
+    font-size: 1.6rem; 
+    font-weight: 800; 
+    color: #581c87; 
+    margin-bottom: 5px; 
+}
+
+.temperatura { 
+    font-size: 4rem; 
+    font-weight: 800; 
+    color: #9333ea; /* Roxo principal */
+    margin: 5px 0; 
+    line-height: 1; 
+    text-shadow: 2px 2px 0px #e9d5ff; /* Sombrinha fofa no texto */
+}
+
+.descricao { 
+    font-size: 1.2rem; 
+    color: #7e22ce; 
+    text-transform: capitalize; 
+    font-weight: 600; 
+}
+
+.icone { 
+    width: 110px; 
+    height: 110px; 
+    margin: 0 auto; 
+    display: block; 
+    filter: drop-shadow(0 6px 8px rgba(107, 33, 168, 0.2));
+}
+
+/* =========================================
+   UTILITÁRIOS E ERROS
+   ========================================= */
+.hidden { display: none; }
+
+.erro-container {
+    color: #b91c1c; 
+    background: #fef2f2; 
+    border: 2px dashed #fca5a5; /* Borda tracejada pro erro também */
+    padding: 15px; 
+    border-radius: 20px; 
+    margin-top: 20px;
+    animation: fadeIn 0.4s ease-in; 
+    font-weight: 600;
+}
+
+/* Animações Fofas */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceIn {
+    0% { opacity: 0; transform: scale(0.3); }
+    50% { opacity: 1; transform: scale(1.05); }
+    70% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
