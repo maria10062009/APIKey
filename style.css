@@ -35,7 +35,7 @@ h1 {
 }
 
 /* =========================================
-   INPUTS E BOTÕES
+   INPUTS E BOTÕES GERAIS
    ========================================= */
 input {
     width: 100%;
@@ -65,7 +65,7 @@ input:focus {
 button {
     width: 100%;
     padding: 16px;
-    /* Degradê roxo mágico para o botão */
+    /* Degradê roxo mágico para o botão principal */
     background: linear-gradient(to right, #a855f7, #9333ea);
     color: white;
     border: none;
@@ -86,6 +86,54 @@ button:hover {
 
 button:active { 
     transform: translateY(0); 
+}
+
+/* =========================================
+   BOTÃO DE GEOLOCALIZAÇÃO (Especial Rosa)
+   ========================================= */
+#btn-geo {
+    background: linear-gradient(to right, #f472b6, #db2777); /* Rosa fofo que combina com roxo */
+    margin-top: 15px;
+    box-shadow: 0 6px 15px rgba(219, 39, 119, 0.3);
+}
+
+#btn-geo:hover {
+    background: linear-gradient(to right, #db2777, #be185d);
+    box-shadow: 0 8px 20px rgba(219, 39, 119, 0.4);
+}
+
+/* =========================================
+   HISTÓRICO DE CIDADES (Pílulas)
+   ========================================= */
+.historico-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn-historico {
+    width: auto; /* Evita que ocupe a tela toda como o botão principal */
+    background: #f3e8ff; /* Lilás clarinho */
+    background-image: none; /* Tira o degradê */
+    border: 2px solid #e9d5ff;
+    color: #6b21a8; /* Roxo escuro */
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: none;
+}
+
+.btn-historico:hover {
+    background: #d8b4fe;
+    border-color: #c084fc;
+    color: #4c1d95;
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 4px 10px rgba(107, 33, 168, 0.2);
 }
 
 /* =========================================
